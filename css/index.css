@@ -3,7 +3,7 @@
   --surface: #ffffff;
   --text: #181818;
   --muted: #6b7280;
-  --accent: #e60023;
+  --accent: #393ff5;
   --line: #e5e7eb;
   --shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
@@ -185,5 +185,127 @@ main {
 @media (max-width: 420px) {
   .feed {
     column-count: 1;
+  }
+}
+
+.index-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 18px;
+}
+
+.index-sidebar {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  height: fit-content;
+  position: sticky;
+  top: 78px;
+}
+
+.index-sidebar h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.index-sidebar a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 9px 10px;
+  border-radius: 10px;
+}
+
+.index-sidebar a:hover {
+  background: #eef1f4;
+}
+
+.index-content {
+  display: grid;
+  gap: 16px;
+}
+
+.index-hero {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.hero-tag {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.index-hero h1 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 8px;
+}
+
+.index-hero p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.quick-tile {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.quick-tile img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.tile-body {
+  padding: 12px;
+}
+
+.tile-body h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.tile-body p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 980px) {
+  .index-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .index-sidebar {
+    position: static;
+  }
+
+  .index-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .index-grid {
+    grid-template-columns: 1fr;
   }
 }
