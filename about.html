@@ -5,38 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | BlueImg</title>
   <link rel="stylesheet" href="css/about.css" />
+  <script src="js/about.js" defer></script>
 </head>
 <body>
   <main class="container">
     <section class="hero">
       <p class="tag">About BlueImg</p>
-      <h1>Visual workspace inspired by Pinterest and Unsplash browsing.</h1>
-      <p>BlueImg is a front-end practice project focused on clean layouts, frame-based navigation, and image-first interfaces.</p>
+      <h1>Responsive visual workspace inspired by Pinterest and Unsplash.</h1>
+      <p>BlueImg is a front-end practice project focused on image-first layouts, clear navigation, and mobile-friendly UI behavior.</p>
+      <div class="hero-actions">
+        <a href="explore.html" id="explore-link">Explore Feed</a>
+        <a href="main.html">Open Dashboard</a>
+      </div>
     </section>
 
     <section class="stats" aria-label="Project stats">
-      <article>
-        <h2>05</h2>
+      <article class="stat">
+        <h2 class="stat-value" data-count="5" data-suffix="">05</h2>
         <p>Pages</p>
       </article>
-      <article>
-        <h2>06+</h2>
-        <p>Style sheets</p>
+      <article class="stat">
+        <h2 class="stat-value" data-count="6" data-suffix="+">06+</h2>
+        <p>Stylesheets</p>
       </article>
-      <article>
-        <h2>100%</h2>
-        <p>Responsive</p>
+      <article class="stat">
+        <h2 class="stat-value" data-count="100" data-suffix="%">100%</h2>
+        <p>Responsive goal</p>
       </article>
     </section>
 
-    <section class="grid">
+    <section class="grid" aria-label="Project details">
       <article class="card">
-        <h3>What this project covers</h3>
+        <h3>Scope</h3>
         <ul>
-          <li>Frameset-based app shell</li>
-          <li>Top and side navigation</li>
-          <li>Masonry image feed UI</li>
-          <li>Separate page-focused styling</li>
+          <li>Frameset app shell</li>
+          <li>Header and sidebar navigation</li>
+          <li>Masonry explore feed</li>
+          <li>Page-wise styling</li>
         </ul>
       </article>
 
@@ -44,22 +49,24 @@
         <h3>Current pages</h3>
         <ul>
           <li>Main dashboard</li>
-          <li>Explore feed</li>
-          <li>About details</li>
+          <li>Explore page</li>
+          <li>About page</li>
           <li>Header and sidebar previews</li>
         </ul>
       </article>
 
       <article class="card">
-        <h3>Next improvements</h3>
+        <h3>Next steps</h3>
         <ul>
-          <li>Add working search/filter logic</li>
-          <li>Make cards data-driven</li>
-          <li>Add dark mode + theme switch</li>
-          <li>Replace dummy image seeds with real assets</li>
+          <li>Add search/filter interactions</li>
+          <li>Load cards from data source</li>
+          <li>Theme switch support</li>
+          <li>Use real media assets</li>
         </ul>
       </article>
     </section>
+
+    <p class="foot-note">Updated <span id="current-year"></span></p>
   </main>
 </body>
 </html>

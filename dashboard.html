@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | BlueImg</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+  <main class="dashboard">
+    <section class="hero">
+      <div>
+        <p class="tag">Dashboard</p>
+        <h1>Welcome back, Creator</h1>
+        <p>Track your boards, activity, and weekly progress in one place.</p>
+      </div>
+      <div class="hero-meta">
+        <p>Today</p>
+        <h2 id="live-date">--</h2>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Quick stats">
+      <article class="stat">
+        <h3 id="boards-count" data-target="24">0</h3>
+        <p>Boards</p>
+      </article>
+      <article class="stat">
+        <h3 id="pins-count" data-target="186">0</h3>
+        <p>Total Pins</p>
+      </article>
+      <article class="stat">
+        <h3 id="views-count" data-target="9400">0</h3>
+        <p>Monthly Views</p>
+      </article>
+      <article class="stat">
+        <h3 id="save-rate" data-target="73">0%</h3>
+        <p>Save Rate</p>
+      </article>
+    </section>
+
+    <section class="layout">
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Recent Boards</h2>
+          <a href="explore.html">See all</a>
+        </div>
+        <ul class="list">
+          <li><span>Mobile UI Pack</span><em>Updated 2h ago</em></li>
+          <li><span>Travel Moodboard</span><em>Updated 5h ago</em></li>
+          <li><span>Kitchen Interior Ideas</span><em>Updated yesterday</em></li>
+          <li><span>Poster Concepts</span><em>Updated 2 days ago</em></li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Weekly Goal</h2>
+          <span id="goal-label">0%</span>
+        </div>
+        <div class="bar"><span id="goal-fill"></span></div>
+        <p class="helper">Publish 12 new pins this week. You are close to finishing your target.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

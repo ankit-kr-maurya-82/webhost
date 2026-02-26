@@ -1,19 +1,20 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BlueImg Workspace</title>
+  <link rel="stylesheet" href="css/shell.css" />
 </head>
-<frameset rows="84,*" border="0" frameborder="0" framespacing="0">
-  <frame src="header.html" name="topFrame" scrolling="no" noresize="noresize" title="Top Navigation" />
-  <frameset cols="230,*" border="0" frameborder="0" framespacing="0">
-    <frame src="sidebar.html" name="leftFrame" noresize="noresize" title="Sidebar Navigation" />
-    <frame src="main.html" name="mainFrame" title="Main Content" />
-  </frameset>
-  <noframes>
-    <body>
-      <p>Your browser does not support frames. Open <a href="main.html">main.html</a>.</p>
-    </body>
-  </noframes>
-</frameset>
+<body>
+  <div class="shell">
+    <iframe class="frame-top" src="header.html" name="topFrame" title="Top Navigation"></iframe>
+    <iframe class="frame-side" src="sidebar.html" name="leftFrame" title="Sidebar Navigation"></iframe>
+    <iframe class="frame-main" src="dashboard.html" name="mainFrame" title="Main Content"></iframe>
+  </div>
+
+  <noscript>
+    <p class="fallback">JavaScript is not required. Open <a href="dashboard.html">dashboard.html</a>.</p>
+  </noscript>
+</body>
 </html>

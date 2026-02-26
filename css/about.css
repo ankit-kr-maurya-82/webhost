@@ -21,9 +21,11 @@ body {
 }
 
 .container {
-  max-width: 1020px;
+  max-width: 1040px;
   margin: 20px auto;
   padding: 0 12px;
+  display: grid;
+  gap: 14px;
 }
 
 .hero {
@@ -31,7 +33,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 14px;
   box-shadow: var(--shadow);
-  padding: 24px;
+  padding: clamp(16px, 3vw, 26px);
 }
 
 .tag {
@@ -44,7 +46,7 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(1.3rem, 3.5vw, 2.2rem);
   line-height: 1.25;
   margin-bottom: 10px;
 }
@@ -54,45 +56,55 @@ body {
   line-height: 1.6;
 }
 
-.stats {
+.hero-actions {
   margin-top: 14px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.stats article {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  padding: 14px;
+.hero-actions a {
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 9px 12px;
 }
 
-.stats h2 {
-  color: var(--accent);
-  font-size: 1.5rem;
-  margin-bottom: 3px;
+.hero-actions a:first-child {
+  background: var(--accent);
+  color: #fff;
 }
 
-.stats p {
-  color: var(--muted);
-  font-weight: 600;
+.hero-actions a:last-child {
+  background: #eaf0ff;
+  color: #1f3ea8;
 }
 
+.stats,
 .grid {
-  margin-top: 14px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
 }
 
+.stat,
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 12px;
   box-shadow: var(--shadow);
   padding: 16px;
+}
+
+.stat h2 {
+  color: var(--accent);
+  font-size: clamp(1.3rem, 4vw, 1.7rem);
+  margin-bottom: 4px;
+}
+
+.stat p {
+  color: var(--muted);
+  font-weight: 600;
 }
 
 .card h3 {
@@ -106,9 +118,28 @@ body {
   line-height: 1.6;
 }
 
-@media (max-width: 900px) {
-  .stats,
-  .grid {
-    grid-template-columns: 1fr;
+@media (max-width: 640px) {
+  .container {
+    margin: 12px auto;
+    padding: 0 8px;
+    gap: 10px;
+  }
+
+  .stat,
+  .card {
+    padding: 14px;
+  }
+}
+
+.foot-note {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: right;
+  padding: 2px 4px 0;
+}
+
+@media (max-width: 640px) {
+  .foot-note {
+    text-align: left;
   }
 }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | BlueImg</title>
+    <link rel="stylesheet" href="css/signup.css">
+    <script src="js/signup.js" defer></script>
+</head>
+<body>
+    <main class="signup-page">
+        <section class="intro">
+            <p class="tag">Join BlueImg</p>
+            <h1>Create your account</h1>
+            <p>Save inspirations, manage boards, and track your dashboard activity in one workspace.</p>
+            <ul>
+                <li>Organize unlimited boards</li>
+                <li>Discover visual trends</li>
+                <li>Access your dashboard instantly</li>
+            </ul>
+        </section>
+
+        <section class="form-wrap">
+            <h2>Sign up</h2>
+            <form id="signup-form" novalidate>
+                <label for="fullName">Full Name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="At least 8 characters" minlength="8" required>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter password" minlength="8" required>
+
+                <div class="check-row">
+                    <input id="terms" type="checkbox" required>
+                    <label for="terms">I agree to the Terms and Privacy Policy</label>
+                </div>
+
+                <button type="submit">Create Account</button>
+                <p id="form-message" class="message" aria-live="polite"></p>
+            </form>
+
+            <p class="signin-link">Already have an account? <a href="index.html">Go to dashboard</a></p>
+        </section>
+    </main>
+</body>
+</html>

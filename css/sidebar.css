@@ -13,6 +13,12 @@
   padding: 0;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: var(--bg);
@@ -20,16 +26,11 @@ body {
 }
 
 .sidebar-shell {
-  height: 100vh;
-  padding: 16px 12px;
+  height: 100%;
+  padding: 12px 10px;
   border-right: 1px solid var(--line);
   background: var(--surface);
-}
-
-.sidebar-shell h1 {
-  font-size: 1.05rem;
-  margin-bottom: 12px;
-  color: var(--accent);
+  overflow: auto;
 }
 
 .menu {
@@ -42,12 +43,32 @@ body {
   text-decoration: none;
   color: var(--muted);
   font-weight: 600;
-  padding: 10px 11px;
+  padding: 9px 10px;
   border-radius: 10px;
+  white-space: nowrap;
 }
 
 .menu a:hover,
 .menu a.active {
   color: var(--text);
   background: #edf2ff;
+}
+
+@media (max-width: 900px) {
+  .sidebar-shell {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 8px;
+  }
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .menu a {
+    padding: 8px 10px;
+    font-size: 0.92rem;
+  }
 }
