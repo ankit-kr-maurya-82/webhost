@@ -90,3 +90,10 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.tag i,
+.card h2 i,
+.card a i {
+  margin-right: 6px;
+  line-height: 1;
+}

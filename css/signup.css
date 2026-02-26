@@ -167,3 +167,17 @@ button[type="submit"]:hover {
     padding: 16px;
   }
 }
+
+.tag i,
+.intro ul i,
+.form-wrap h2 i,
+button[type="submit"] i,
+.signin-link a i {
+  margin-right: 6px;
+  line-height: 1;
+}
+
+.intro ul {
+  list-style: none;
+  padding-left: 0;
+}

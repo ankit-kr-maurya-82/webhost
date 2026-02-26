@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | BlueImg</title>
     <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/signup.js" defer></script>
 </head>
 <body>
     <main class="signup-page">
         <section class="intro">
-            <p class="tag">Join BlueImg</p>
+            <p class="tag"><i class="fa-solid fa-user-plus"></i> Join BlueImg</p>
             <h1>Create your account</h1>
             <p>Save inspirations, manage boards, and track your dashboard activity in one workspace.</p>
             <ul>
-                <li>Organize unlimited boards</li>
-                <li>Discover visual trends</li>
-                <li>Access your dashboard instantly</li>
+                <li><i class="fa-solid fa-check"></i> Organize unlimited boards</li>
+                <li><i class="fa-solid fa-check"></i> Discover visual trends</li>
+                <li><i class="fa-solid fa-check"></i> Access your dashboard instantly</li>
             </ul>
         </section>
 
         <section class="form-wrap">
-            <h2>Sign up</h2>
+            <h2><i class="fa-solid fa-address-card"></i> Sign up</h2>
             <form id="signup-form" novalidate>
                 <label for="fullName">Full Name</label>
                 <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required>
@@ -40,11 +41,11 @@
                     <label for="terms">I agree to the Terms and Privacy Policy</label>
                 </div>
 
-                <button type="submit">Create Account</button>
+                <button type="submit"><i class="fa-solid fa-circle-check"></i> Create Account</button>
                 <p id="form-message" class="message" aria-live="polite"></p>
             </form>
 
-            <p class="signin-link">Already have an account? <a href="index.html">Go to dashboard</a></p>
+            <p class="signin-link">Already have an account? <a href="index.html"><i class="fa-solid fa-right-to-bracket"></i> Go to dashboard</a></p>
         </section>
     </main>
 </body>

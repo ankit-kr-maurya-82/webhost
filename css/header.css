@@ -99,3 +99,19 @@ body {
     padding-bottom: 2px;
   }
 }
+
+.brand i {
+  margin-right: 6px;
+  font-size: 0.95em;
+}
+
+.top-nav a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.top-nav a i {
+  margin-right: 6px;
+  font-size: 0.86em;
+  line-height: 1;
+}

@@ -204,3 +204,12 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.tag i,
+.hero-meta p i,
+.stat p i,
+.panel-head h2 i,
+.panel-head a i {
+  margin-right: 6px;
+  line-height: 1;
+}
