@@ -1,11 +1,11 @@
 :root {
-  --bg: #f5f7fb;
+  --bg: #f4f7fd;
   --surface: #ffffff;
-  --text: #1a1c25;
-  --muted: #646b7d;
-  --line: #e3e7f0;
-  --accent: #2e5bff;
-  --shadow: 0 12px 24px rgba(20, 33, 70, 0.08);
+  --text: #1a2032;
+  --muted: #616a84;
+  --line: #e3e9f4;
+  --accent: #1f5eff;
+  --shadow: 0 12px 24px rgba(22, 38, 79, 0.08);
 }
 
 * {
@@ -16,61 +16,22 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--bg);
+  background: radial-gradient(circle at top right, #eaf0ff, var(--bg) 45%);
   color: var(--text);
-}
-
-.topbar {
-  max-width: 1080px;
-  margin: 16px auto;
-  padding: 14px 16px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 1.2rem;
-}
-
-nav {
-  display: flex;
-  gap: 8px;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--muted);
-  font-weight: 600;
-  padding: 8px 12px;
-  border-radius: 999px;
-}
-
-nav a.active,
-nav a:hover {
-  color: var(--text);
-  background: #eef2ff;
 }
 
 .container {
-  max-width: 1080px;
-  margin: 0 auto 24px;
-  padding: 0 8px;
+  max-width: 1020px;
+  margin: 20px auto;
+  padding: 0 12px;
 }
 
 .hero {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow: var(--shadow);
-  padding: 22px;
+  padding: 24px;
 }
 
 .tag {
@@ -83,7 +44,8 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: clamp(1.4rem, 3.3vw, 2.2rem);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.25;
   margin-bottom: 10px;
 }
 
@@ -92,11 +54,37 @@ nav a:hover {
   line-height: 1.6;
 }
 
-.grid {
-  margin-top: 16px;
+.stats {
+  margin-top: 14px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
+}
+
+.stats article {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.stats h2 {
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-bottom: 3px;
+}
+
+.stats p {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
 }
 
 .card {
@@ -107,7 +95,7 @@ nav a:hover {
   padding: 16px;
 }
 
-.card h2 {
+.card h3 {
   font-size: 1rem;
   margin-bottom: 8px;
 }
@@ -119,13 +107,8 @@ nav a:hover {
 }
 
 @media (max-width: 900px) {
+  .stats,
   .grid {
     grid-template-columns: 1fr;
-  }
-
-  .topbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
   }
 }
