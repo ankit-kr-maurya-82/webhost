@@ -1,0 +1,151 @@
+:root {
+  --bg: #f6f7f8;
+  --surface: #ffffff;
+  --line: #e5e7eb;
+  --text: #181818;
+  --muted: #6b7280;
+  --accent: #e60023;
+  --success: #1f8f4a;
+  --danger: #d7263d;
+  --shadow: 0 14px 30px rgba(21, 39, 84, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top right, #f2f3f5, var(--bg) 48%);
+  color: var(--text);
+}
+
+.contact-page {
+  max-width: 1060px;
+  margin: 20px auto;
+  padding: 0 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.intro,
+.form-wrap {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.tag {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.tag i,
+.info-list i,
+.form-wrap h2 i,
+button i {
+  margin-right: 6px;
+}
+
+.intro h1 {
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  margin-bottom: 10px;
+}
+
+.intro p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.info-list {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.info-list p {
+  color: #3f3f46;
+  font-weight: 600;
+}
+
+.form-wrap h2 {
+  margin-bottom: 12px;
+}
+
+form {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 11px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #ffd8de;
+  border-color: #ffb8c4;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 700;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.status {
+  min-height: 20px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.status.success {
+  color: var(--success);
+}
+
+.status.error {
+  color: var(--danger);
+}
+
+@media (max-width: 900px) {
+  .contact-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-page {
+    margin: 12px auto;
+    padding: 0 8px;
+  }
+
+  .intro,
+  .form-wrap {
+    padding: 16px;
+  }
+}
+

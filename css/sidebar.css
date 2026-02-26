@@ -4,7 +4,7 @@
   --line: #e5e7eb;
   --text: #181818;
   --muted: #6b7280;
-  --accent: #e60023;
+  --accent: #003ae6;
 }
 
 * {
@@ -71,6 +71,7 @@ body {
   gap: 3px;
   overflow: auto;
   padding-right: 2px;
+  padding-right: 2px;
 }
 
 .menu-title {
@@ -115,14 +116,15 @@ body {
 }
 
 .menu a.active {
-  background: #fff1f3;
-  border-color: #ffd3d9;
-  color: #7a1024;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 50, 230, 0.22);
 }
 
 .menu a.active .icon {
-  background: var(--accent);
-  color: #fff;
+  background: #ffffff;
+  color: var(--accent);
 }
 
 .profile {
@@ -177,25 +179,18 @@ body {
   }
 
   .menu {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: 6px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 4px;
     padding-bottom: 2px;
   }
 
-  .menu-title,
-  .profile,
-  .brand span:last-child,
-  .menu a span:last-child {
-    display: none;
-  }
-
   .menu a {
-    padding: 7px;
-    min-width: 40px;
-    justify-content: center;
+    padding: 8px 10px;
+    min-width: 0;
+    justify-content: flex-start;
   }
 
   .icon {
@@ -203,3 +198,18 @@ body {
     height: 24px;
   }
 }
+
+/* Hide scrollbar, keep scrolling */
+.sidebar-shell,
+.menu {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sidebar-shell::-webkit-scrollbar,
+.menu::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+

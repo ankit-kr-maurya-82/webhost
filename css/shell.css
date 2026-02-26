@@ -1,7 +1,7 @@
 :root {
   --line: #e3e8f4;
   --bg: #f3f6fc;
-  --top-h: 86px;
+  --top-h: 96px;
   --side-w: 268px;
 }
 
@@ -42,14 +42,16 @@ body {
 .frame-top {
   grid-column: 1 / -1;
   grid-row: 1;
-  border-bottom: 1px solid var(--line);
-  background: #fff;
+  padding: 10px 10px 2px;
+  height: 100%;
 }
 
 .frame-side {
   grid-column: 1;
   grid-row: 2;
   padding: 8px 0 8px 8px;
+  height: calc(100% - 22px);
+  align-self: center;
 }
 
 .frame-main {
@@ -65,12 +67,16 @@ body {
 
 @media (max-width: 900px) {
   :root {
-    --top-h: 124px;
+    --top-h: 132px;
   }
 
   .shell {
     grid-template-columns: 1fr;
-    grid-template-rows: var(--top-h) 86px calc(100vh - var(--top-h) - 86px);
+    grid-template-rows: var(--top-h) 180px calc(100vh - var(--top-h) - 180px);
+  }
+
+  .frame-top {
+    padding: 8px 8px 2px;
   }
 
   .frame-side {
@@ -78,6 +84,8 @@ body {
     grid-row: 2;
     padding: 6px 8px;
     border-bottom: 1px solid var(--line);
+    height: 100%;
+    align-self: stretch;
   }
 
   .frame-main {
@@ -88,10 +96,10 @@ body {
 
 @media (max-width: 560px) {
   :root {
-    --top-h: 142px;
+    --top-h: 148px;
   }
 
   .shell {
-    grid-template-rows: var(--top-h) 76px calc(100vh - var(--top-h) - 76px);
+    grid-template-rows: var(--top-h) 160px calc(100vh - var(--top-h) - 160px);
   }
 }
