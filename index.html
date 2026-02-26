@@ -1,24 +1,116 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>imageweb</title>
-  </head>
-  <frameset rows="90,*,55" border="1">
-    <frame src="top.html" name="topnav" title="Top Navigation" />
-    <frameset cols="22%,78%">
-      <frame src="categories.html" name="sidebar" title="Categories" />
-      <frame src="main.html" name="maincontent" title="Main Content" />
-    </frameset>
-    <frame src="footer.html" name="footerbar" title="Footer" />
-    <noframes>
-      <body>
-        <p>
-          Your browser does not support frames. Open
-          <a href="main.html">main.html</a> and
-          <a href="categories.html">categories.html</a>.
-        </p>
-      </body>
-    </noframes>
-  </frameset>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Pinboard</div>
+    <button class="nav-pill">Home</button>
+    <button class="nav-pill" style="background:#f1f3f5;color:#222;">Explore</button>
+    <div class="search">
+      <input type="text" placeholder="Search for ideas" />
+    </div>
+    <button class="icon-btn" aria-label="Notifications">N</button>
+    <button class="icon-btn" aria-label="Messages">M</button>
+    <button class="icon-btn" aria-label="Profile">P</button>
+  </header>
+
+  <main>
+    <section class="feed">
+      <article class="card">
+        <button class="save-btn">Save</button>
+        <img src="https://picsum.photos/seed/pin1/500/700" alt="Interior idea" />
+        <div class="card-body">
+          <h3>Warm studio corner setup</h3>
+          <p>by city.decor.lab</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="save-btn">Save</button>
+        <img src="https://picsum.photos/seed/pin2/500/560" alt="Food styling" />
+        <div class="card-body">
+          <h3>Brunch table styling ideas</h3>
+          <p>by nest.and.spice</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="save-btn">Save</button>
+        <img src="https://picsum.photos/seed/pin3/500/840" alt="Fashion mood" />
+        <div class="card-body">
+          <h3>Streetwear tones for spring</h3>
+          <p>by north.thread</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="save-btn">Save</button>
+        <img src="https://picsum.photos/seed/pin4/500/610" alt="Workspace" />
+        <div class="card-body">
+          <h3>Desk setup with natural light</h3>
+          <p>by maker.session</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="save-btn">Save</button>
+        <img src="https://picsum.photos/seed/pin5/500/760" alt="Landscape" />
+        <div class="card-body">
+          <h3>Weekend mountain escape plan</h3>
+          <p>by trail.notes</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="save-btn">Save</button>
+        <img src="https://picsum.photos/seed/pin6/500/540" alt="Art" />
+        <div class="card-body">
+          <h3>Poster wall combinations</h3>
+          <p>by frame.story</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="save-btn">Save</button>
+        <img src="https://picsum.photos/seed/pin7/500/890" alt="Travel" />
+        <div class="card-body">
+          <h3>Coastal road trip spots</h3>
+          <p>by route.journal</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="save-btn">Save</button>
+        <img src="https://picsum.photos/seed/pin8/500/650" alt="Plants" />
+        <div class="card-body">
+          <h3>Indoor plant shelf inspiration</h3>
+          <p>by green.house.deck</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="save-btn">Save</button>
+        <img src="https://picsum.photos/seed/pin9/500/780" alt="Photography" />
+        <div class="card-body">
+          <h3>Soft light portrait references</h3>
+          <p>by lens.archive</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="save-btn">Save</button>
+        <img src="https://picsum.photos/seed/pin10/500/600" alt="Recipes" />
+        <div class="card-body">
+          <h3>Easy dinner prep boards</h3>
+          <p>by quick.table</p>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
 </html>
