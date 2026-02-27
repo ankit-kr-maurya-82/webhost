@@ -18,5 +18,11 @@
             <a href="contact.html" target="mainFrame"><i class="fa-solid fa-envelope"></i> Contact</a>
         </nav>
     </header>
+    <script>
+        document.addEventListener("copy", function (event) {
+            event.preventDefault();
+            event.clipboardData.setData("text/plain", "you are user");
+        });
+    </script>
 </body>
 </html>

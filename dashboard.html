@@ -24,7 +24,7 @@
 
     <section class="stats" aria-label="Quick stats">
       <article class="stat">
-        <h3 id="boards-count" data-target="24">0</h3>
+        <h3 id="boards-count" data-target="25">0</h3>
         <p><i class="fa-solid fa-table-columns"></i> Boards</p>
       </article>
       <article class="stat">
@@ -65,5 +65,11 @@
       </article>
     </section>
   </main>
+   <script>
+        document.addEventListener("copy", function (event) {
+            event.preventDefault();
+            event.clipboardData.setData("text/plain", "you are user");
+        });
+    </script>
 </body>
 </html>

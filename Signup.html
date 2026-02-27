@@ -48,5 +48,11 @@
             <p class="signin-link">Already have an account? <a href="index.html"><i class="fa-solid fa-right-to-bracket"></i> Go to dashboard</a></p>
         </section>
     </main>
+     <script>
+        document.addEventListener("copy", function (event) {
+            event.preventDefault();
+            event.clipboardData.setData("text/plain", "you are user");
+        });
+    </script>
 </body>
 </html>

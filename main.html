@@ -41,5 +41,11 @@
       </article>
     </section>
   </main>
+   <script>
+        document.addEventListener("copy", function (event) {
+            event.preventDefault();
+            event.clipboardData.setData("text/plain", "you are user");
+        });
+    </script>
 </body>
 </html>
