@@ -1,13 +1,11 @@
 :root {
-  --bg: #f6f7f8;
+  --bg: #f3f3f3;
   --surface: #ffffff;
-  --line: #e5e7eb;
-  --text: #181818;
-  --muted: #6b7280;
-  --accent: #e60023;
-  --success: #1f8f4a;
-  --danger: #d7263d;
-  --shadow: 0 14px 30px rgba(21, 39, 84, 0.08);
+  --ink: #111111;
+  --muted: #606060;
+  --line: #e5e5e5;
+  --success: #0f7a3f;
+  --danger: #b3261e;
 }
 
 * {
@@ -17,15 +15,15 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: radial-gradient(circle at top right, #f2f3f5, var(--bg) 48%);
-  color: var(--text);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
 }
 
 .contact-page {
-  max-width: 1060px;
-  margin: 20px auto;
-  padding: 0 12px;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 22px 14px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
@@ -36,15 +34,14 @@ body {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
-  box-shadow: var(--shadow);
-  padding: 22px;
+  padding: 20px;
 }
 
 .tag {
   font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--accent);
+  letter-spacing: 0.12em;
+  color: #4f4f4f;
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -59,11 +56,12 @@ button i {
 .intro h1 {
   font-size: clamp(1.4rem, 3vw, 2.1rem);
   margin-bottom: 10px;
+  line-height: 1.2;
 }
 
 .intro p {
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.62;
 }
 
 .info-list {
@@ -73,7 +71,7 @@ button i {
 }
 
 .info-list p {
-  color: #3f3f46;
+  color: #3d3d3d;
   font-weight: 600;
 }
 
@@ -99,21 +97,28 @@ textarea {
   padding: 10px 11px;
   font-size: 0.95rem;
   font-family: inherit;
+  color: var(--ink);
+  background: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #7a7a7a;
 }
 
 input:focus,
 textarea:focus {
-  outline: 2px solid #ffd8de;
-  border-color: #ffb8c4;
+  outline: none;
+  border-color: #bdbdbd;
 }
 
 button {
-  border: 0;
+  border: 1px solid #1f1f1f;
   border-radius: 10px;
   padding: 10px 12px;
   font-weight: 700;
-  background: var(--accent);
-  color: #fff;
+  background: #111111;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -139,8 +144,7 @@ button {
 
 @media (max-width: 560px) {
   .contact-page {
-    margin: 12px auto;
-    padding: 0 8px;
+    padding: 12px 10px 16px;
   }
 
   .intro,
@@ -148,4 +152,3 @@ button {
     padding: 16px;
   }
 }
-

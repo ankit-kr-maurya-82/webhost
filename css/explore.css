@@ -1,11 +1,9 @@
 :root {
-  --bg: #f6f7f8;
+  --bg: #f3f3f3;
   --surface: #ffffff;
-  --text: #151515;
-  --muted: #6d7480;
-  --line: #e4e7eb;
-  --accent: #e60023;
-  --shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  --ink: #111111;
+  --muted: #606060;
+  --line: #e5e5e5;
 }
 
 * {
@@ -15,16 +13,16 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: var(--bg);
-  color: var(--text);
+  color: var(--ink);
 }
 
 .explore-top {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(246, 247, 248, 0.92);
+  background: rgba(243, 243, 243, 0.94);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
   display: flex;
@@ -40,9 +38,14 @@ body {
 
 .search {
   flex: 1;
-  background: #eceff3;
+  background: #ececec;
+  border: 1px solid #ececec;
   border-radius: 999px;
   padding: 10px 14px;
+}
+
+.search:focus-within {
+  border-color: #cccccc;
 }
 
 .search input {
@@ -51,14 +54,19 @@ body {
   outline: 0;
   background: transparent;
   font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.search input::placeholder {
+  color: #767676;
 }
 
 .upload {
-  border: 0;
+  border: 1px solid #1f1f1f;
   border-radius: 999px;
   padding: 9px 13px;
-  background: #111;
-  color: #fff;
+  background: #111111;
+  color: #ffffff;
   font-weight: 700;
   cursor: pointer;
 }
@@ -77,8 +85,8 @@ body {
 }
 
 .chip {
-  border: 0;
-  background: #eceff3;
+  border: 1px solid var(--line);
+  background: #ffffff;
   color: #2a2a2a;
   border-radius: 999px;
   padding: 8px 12px;
@@ -87,8 +95,9 @@ body {
 }
 
 .chip.active {
-  background: #111;
-  color: #fff;
+  background: #111111;
+  border-color: #111111;
+  color: #ffffff;
 }
 
 .feed {
@@ -99,11 +108,11 @@ body {
 .card {
   break-inside: avoid;
   margin-bottom: 14px;
-  border-radius: 16px;
+  border-radius: 14px;
   overflow: hidden;
   position: relative;
   background: var(--surface);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
 }
 
 .card img {
@@ -118,8 +127,8 @@ body {
   border: 0;
   border-radius: 999px;
   padding: 8px 12px;
-  background: var(--accent);
-  color: #fff;
+  background: #111111;
+  color: #ffffff;
   font-weight: 700;
   opacity: 0;
   cursor: pointer;
@@ -132,8 +141,8 @@ body {
   right: 0;
   bottom: 0;
   padding: 12px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
-  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0));
+  color: #ffffff;
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -145,7 +154,7 @@ body {
 
 .meta p {
   font-size: 0.8rem;
-  color: #dde3ee;
+  color: #dddddd;
 }
 
 .card:hover .save,

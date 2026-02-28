@@ -1,11 +1,9 @@
 :root {
-  --bg: #f5f7fc;
+  --bg: #f3f3f3;
   --surface: #ffffff;
-  --line: #e0e6f3;
-  --text: #1b2236;
-  --muted: #616c88;
-  --accent: #1f5eff;
-  --shadow: 0 12px 24px rgba(15, 36, 85, 0.08);
+  --ink: #111111;
+  --muted: #626262;
+  --line: #e5e5e5;
 }
 
 * {
@@ -15,79 +13,122 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: var(--bg);
-  color: var(--text);
+  color: var(--ink);
 }
 
 .container {
-  max-width: 980px;
-  margin: 20px auto;
-  padding: 0 12px;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 22px 14px;
+  display: grid;
+  gap: 16px;
 }
 
 .hero {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  padding: 22px;
+  background: #111111;
+  color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: 340px;
+}
+
+.hero-copy {
+  padding: clamp(20px, 4vw, 42px);
+  display: grid;
+  align-content: center;
+  gap: 12px;
 }
 
 .tag {
   font-size: 0.78rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--accent);
+  color: #c7c7c7;
   font-weight: 700;
-  margin-bottom: 8px;
 }
 
 .hero h1 {
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  margin-bottom: 8px;
+  font-size: clamp(1.5rem, 2.8vw, 2.5rem);
+  line-height: 1.15;
 }
 
 .hero p {
-  color: var(--muted);
-  line-height: 1.6;
+  color: #d9d9d9;
+  line-height: 1.65;
+  max-width: 58ch;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .cards {
-  margin-top: 14px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
 }
 
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  padding: 14px;
+  border-radius: 14px;
+  padding: 16px;
 }
 
 .card h2 {
-  font-size: 1rem;
-  margin-bottom: 6px;
+  font-size: 1.02rem;
+  margin-bottom: 8px;
 }
 
 .card p {
   color: var(--muted);
-  line-height: 1.5;
-  margin-bottom: 10px;
+  line-height: 1.55;
+  margin-bottom: 12px;
 }
 
 .card a {
   text-decoration: none;
-  color: var(--accent);
+  color: var(--ink);
   font-weight: 700;
 }
 
-@media (max-width: 900px) {
+.card a:hover {
+  color: #000000;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    max-height: 260px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 12px 10px 16px;
+    gap: 12px;
+  }
+
   .cards {
     grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 14px;
   }
 }
 
