@@ -1,7 +1,7 @@
 :root {
   --line: #e3e8f4;
   --bg: #f3f6fc;
-  --top-h: 96px;
+  --top-h: 104px;
 }
 
 * {
@@ -57,7 +57,7 @@ body {
 
 @media (max-width: 900px) {
   :root {
-    --top-h: 132px;
+    --top-h: 92px;
   }
 
   .shell {
@@ -77,7 +77,7 @@ body {
 
 @media (max-width: 560px) {
   :root {
-    --top-h: 148px;
+    --top-h: 84px;
   }
 
   .shell {

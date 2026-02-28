@@ -36,6 +36,8 @@ body {
   box-shadow: 0 14px 30px rgba(21, 39, 84, 0.12);
   background: linear-gradient(120deg, rgba(248, 250, 255, 0.9) 0%, rgba(238, 243, 255, 0.92) 100%);
   backdrop-filter: blur(10px);
+  width: 100%;
+  overflow: hidden;
 }
 
 .brand {
@@ -44,6 +46,19 @@ body {
   font-weight: 800;
   color: var(--accent);
   white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid #d9e1f4;
+  background: #ffffff;
+  color: var(--accent);
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .top-nav {
@@ -70,25 +85,63 @@ body {
 
 @media (max-width: 900px) {
   .top-strip {
-    min-height: 116px;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
+    min-height: 72px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 10px 12px;
     border-radius: 14px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .top-nav {
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: none;
+    opacity: 1;
+    transition: max-height 0.25s ease, opacity 0.2s ease;
+  }
+
+  .js .top-nav {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+  }
+
+  .top-strip.open .top-nav {
+    max-height: 340px;
+    opacity: 1;
+    padding-top: 8px;
+  }
+
+  .top-nav a {
+    width: 100%;
+    border-radius: 10px;
   }
 }
 
 @media (max-width: 560px) {
+  .top-strip {
+    min-height: 66px;
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
   .brand {
     font-size: 1.1rem;
   }
 
   .top-nav {
-    width: 100%;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 2px;
+    gap: 5px;
+  }
+
+  .top-nav a {
+    padding: 7px 10px;
+    font-size: 0.9rem;
   }
 }
 
@@ -101,4 +154,14 @@ body {
   margin-right: 6px;
   font-size: 0.86em;
   line-height: 1;
+}
+
+/* Hide scrollbar while keeping horizontal nav scrolling available */
+.top-nav {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.top-nav::-webkit-scrollbar {
+  display: none;
 }

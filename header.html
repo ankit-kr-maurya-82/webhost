@@ -6,11 +6,15 @@
     <title>Header</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/header.js" defer></script>
 </head>
 <body>
     <header class="top-strip">
         <a class="brand" href="dashboard.html" target="mainFrame"><i class="fa-solid fa-palette"></i> BlueImg</a>
-        <nav class="top-nav" aria-label="Main navigation">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-controls="topNav" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="top-nav" id="topNav" aria-label="Main navigation">
             <a href="dashboard.html" target="mainFrame"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
             <a href="main.html" target="mainFrame"><i class="fa-solid fa-house"></i> Home</a>
             <a href="about.html" target="mainFrame"><i class="fa-solid fa-circle-info"></i> About</a>
