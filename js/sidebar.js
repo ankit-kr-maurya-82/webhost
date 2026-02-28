@@ -5,7 +5,7 @@
 
   // Keep old collapse behavior if toggle exists.
   if (sidebar && btn) {
-    const key = "blueimg.sidebar.collapsed";
+    const key = "blackimg.sidebar.collapsed";
     const saved = localStorage.getItem(key);
     if (saved === "1") sidebar.classList.add("collapsed");
 
@@ -53,3 +53,4 @@
     });
   });
 })();
+
