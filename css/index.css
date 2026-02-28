@@ -1,11 +1,9 @@
 :root {
-  --bg: #f5f6f7;
+  --bg: #f3f3f3;
   --surface: #ffffff;
-  --text: #181818;
-  --muted: #6b7280;
-  --accent: #393ff5;
-  --line: #e5e7eb;
-  --shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  --text: #111111;
+  --muted: #606060;
+  --line: #e5e5e5;
 }
 
 * {
@@ -15,7 +13,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -36,16 +34,16 @@ body {
 .logo {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--text);
   white-space: nowrap;
 }
 
 .nav-pill {
-  border: none;
+  border: 1px solid #1f1f1f;
   border-radius: 999px;
   padding: 10px 14px;
-  background: #111;
-  color: #fff;
+  background: #111111;
+  color: #ffffff;
   font-weight: 600;
   cursor: pointer;
 }
@@ -54,7 +52,8 @@ body {
   flex: 1;
   display: flex;
   align-items: center;
-  background: #eef1f4;
+  background: #ececec;
+  border: 1px solid #ececec;
   border-radius: 999px;
   padding: 10px 14px;
   min-width: 120px;
@@ -66,7 +65,7 @@ body {
   outline: 0;
   background: transparent;
   font-size: 0.95rem;
-  color: #111;
+  color: var(--text);
 }
 
 .icon-btn {
@@ -79,7 +78,7 @@ body {
 }
 
 .icon-btn:hover {
-  background: #f0f2f4;
+  background: #f2f2f2;
 }
 
 main {
@@ -94,16 +93,16 @@ main {
 .card {
   break-inside: avoid;
   margin-bottom: 16px;
-  border-radius: 18px;
+  border-radius: 14px;
   overflow: hidden;
   background: var(--surface);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
   position: relative;
   transition: transform 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .card img {
@@ -132,8 +131,8 @@ main {
   top: 10px;
   right: 10px;
   border: 0;
-  background: var(--accent);
-  color: #fff;
+  background: #111111;
+  color: #ffffff;
   border-radius: 999px;
   padding: 8px 12px;
   font-size: 0.78rem;
@@ -198,7 +197,6 @@ main {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
-  box-shadow: var(--shadow);
   padding: 16px;
   height: fit-content;
   position: sticky;
@@ -220,7 +218,7 @@ main {
 }
 
 .index-sidebar a:hover {
-  background: #eef1f4;
+  background: #f2f2f2;
 }
 
 .index-content {
@@ -232,15 +230,14 @@ main {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
-  box-shadow: var(--shadow);
   padding: 20px;
 }
 
 .hero-tag {
   font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--accent);
+  letter-spacing: 0.12em;
+  color: #4f4f4f;
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -266,7 +263,6 @@ main {
   border: 1px solid var(--line);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: var(--shadow);
 }
 
 .quick-tile img {

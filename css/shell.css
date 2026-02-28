@@ -1,6 +1,7 @@
 :root {
-  --line: #e3e8f4;
-  --bg: #f3f6fc;
+  --bg: #f3f3f3;
+  --line: #e5e5e5;
+  --text: #111111;
   --top-h: 104px;
 }
 
@@ -17,8 +18,9 @@ body {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: radial-gradient(circle at top left, #e8efff, var(--bg) 52%);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .shell {
@@ -40,19 +42,25 @@ body {
 .frame-top {
   grid-column: 1;
   grid-row: 1;
-  padding: 10px 10px 2px;
   height: 100%;
+  border-bottom: 1px solid var(--line);
 }
 
 .frame-main {
   grid-column: 1;
   grid-row: 2;
-  background: #fff;
+  background: transparent;
 }
 
 .fallback {
-  padding: 10px;
-  color: #1f2433;
+  padding: 12px;
+  color: #4a4a4a;
+}
+
+.fallback a {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
@@ -61,17 +69,7 @@ body {
   }
 
   .shell {
-    grid-template-columns: 1fr;
     grid-template-rows: var(--top-h) calc(100vh - var(--top-h));
-  }
-
-  .frame-top {
-    padding: 8px 8px 2px;
-  }
-
-  .frame-main {
-    grid-column: 1;
-    grid-row: 2;
   }
 }
 

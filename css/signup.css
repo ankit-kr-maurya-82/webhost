@@ -1,13 +1,11 @@
 :root {
-  --bg: #f5f8ff;
+  --bg: #f3f3f3;
   --surface: #ffffff;
-  --text: #1e2538;
-  --muted: #66708b;
-  --line: #e2e8f5;
-  --accent: #225dff;
-  --danger: #d7263d;
-  --success: #1f8f4a;
-  --shadow: 0 14px 30px rgba(22, 39, 84, 0.09);
+  --ink: #111111;
+  --muted: #606060;
+  --line: #e5e5e5;
+  --danger: #b3261e;
+  --success: #0f7a3f;
 }
 
 * {
@@ -17,16 +15,16 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: radial-gradient(circle at top right, #eaf0ff, var(--bg) 42%);
-  color: var(--text);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
   min-height: 100vh;
 }
 
 .signup-page {
-  max-width: 1060px;
-  margin: 20px auto;
-  padding: 0 12px;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 22px 14px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
@@ -37,15 +35,14 @@ body {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
-  box-shadow: var(--shadow);
-  padding: 22px;
+  padding: 20px;
 }
 
 .tag {
   font-size: 0.78rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #4f4f4f;
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -53,17 +50,19 @@ body {
 .intro h1 {
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   margin-bottom: 10px;
+  line-height: 1.2;
 }
 
 .intro p {
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.62;
   margin-bottom: 12px;
 }
 
 .intro ul {
-  padding-left: 18px;
-  color: var(--muted);
+  list-style: none;
+  padding-left: 0;
+  color: #3d3d3d;
   line-height: 1.8;
 }
 
@@ -89,11 +88,18 @@ input[type="password"] {
   border-radius: 10px;
   padding: 10px 11px;
   font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--ink);
+  background: #ffffff;
+}
+
+input::placeholder {
+  color: #7a7a7a;
 }
 
 input:focus {
-  outline: 2px solid #d8e4ff;
-  border-color: #b8cdfa;
+  outline: none;
+  border-color: #bdbdbd;
 }
 
 .check-row {
@@ -111,17 +117,13 @@ input:focus {
 
 button[type="submit"] {
   margin-top: 4px;
-  border: 0;
+  border: 1px solid #1f1f1f;
   border-radius: 10px;
   padding: 10px 12px;
   font-weight: 700;
-  background: var(--accent);
-  color: #fff;
+  background: #111111;
+  color: #ffffff;
   cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  filter: brightness(0.95);
 }
 
 .message {
@@ -145,7 +147,7 @@ button[type="submit"]:hover {
 }
 
 .signin-link a {
-  color: var(--accent);
+  color: var(--ink);
   text-decoration: none;
   font-weight: 700;
 }
@@ -158,8 +160,7 @@ button[type="submit"]:hover {
 
 @media (max-width: 560px) {
   .signup-page {
-    margin: 12px auto;
-    padding: 0 8px;
+    padding: 12px 10px 16px;
   }
 
   .intro,
@@ -175,9 +176,4 @@ button[type="submit"] i,
 .signin-link a i {
   margin-right: 6px;
   line-height: 1;
-}
-
-.intro ul {
-  list-style: none;
-  padding-left: 0;
 }
