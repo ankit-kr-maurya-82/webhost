@@ -1,0 +1,110 @@
+﻿:root {
+  --bg: #f3f3f3;
+  --surface: #ffffff;
+  --ink: #111111;
+  --muted: #5f5f5f;
+  --line: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.gallery-page {
+  width: min(1160px, 100%);
+  margin: 0 auto;
+  padding: 22px 14px;
+  display: grid;
+  gap: 14px;
+}
+
+.top {
+  background: #111111;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: clamp(18px, 3vw, 28px);
+}
+
+.tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #d0d0d0;
+  margin-bottom: 10px;
+}
+
+.top h1 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  line-height: 1.3;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.chip.active {
+  background: #111111;
+  border-color: #111111;
+  color: #ffffff;
+}
+
+.grid {
+  columns: 4 220px;
+  column-gap: 10px;
+}
+
+.photo {
+  break-inside: avoid;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.photo img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.photo.hidden {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    columns: 2 190px;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    columns: 1;
+  }
+}
+
+.tag i {
+  margin-right: 6px;
+}

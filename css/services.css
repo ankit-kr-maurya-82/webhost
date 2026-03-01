@@ -1,0 +1,126 @@
+﻿:root {
+  --bg: #f3f3f3;
+  --surface: #ffffff;
+  --ink: #111111;
+  --muted: #5f5f5f;
+  --line: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.services-page {
+  width: min(1140px, 100%);
+  margin: 0 auto;
+  padding: 22px 14px;
+  display: grid;
+  gap: 14px;
+}
+
+.hero {
+  background: #111111;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: clamp(18px, 3vw, 28px);
+}
+
+.tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #d0d0d0;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: #dfdfdf;
+  line-height: 1.62;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 15px;
+}
+
+.card h2 {
+  margin-bottom: 8px;
+  font-size: 1.08rem;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.pricing {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.pricing h2 {
+  margin-bottom: 10px;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.price-grid article {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+  background: #fafafa;
+}
+
+.price-grid h3 {
+  margin-bottom: 4px;
+}
+
+.cost {
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.price-grid p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .cards,
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tag i,
+.card h2 i {
+  margin-right: 6px;
+}

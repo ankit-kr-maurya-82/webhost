@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery | BlackImg</title>
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="js/gallery.js" defer></script>
+</head>
+<body>
+  <main class="gallery-page">
+    <header class="top">
+      <p class="tag"><i class="fa-solid fa-images"></i> Photo Gallery</p>
+      <h1>Visual collection of travel, nature, and workspace themes.</h1>
+    </header>
+
+    <section class="filters" aria-label="Gallery filters">
+      <button class="chip active" type="button" data-filter="all">All</button>
+      <button class="chip" type="button" data-filter="nature">Nature</button>
+      <button class="chip" type="button" data-filter="travel">Travel</button>
+      <button class="chip" type="button" data-filter="workspace">Workspace</button>
+    </section>
+
+    <section class="grid" aria-label="Photos">
+      <article class="photo" data-category="nature"><img src="https://picsum.photos/seed/g1/800/620" alt="Lake in mountains" /></article>
+      <article class="photo" data-category="travel"><img src="https://picsum.photos/seed/g2/800/760" alt="Road trip view" /></article>
+      <article class="photo" data-category="workspace"><img src="https://picsum.photos/seed/g3/800/640" alt="Laptop and notebook" /></article>
+      <article class="photo" data-category="nature"><img src="https://picsum.photos/seed/g4/800/780" alt="Forest sunlight" /></article>
+      <article class="photo" data-category="travel"><img src="https://picsum.photos/seed/g5/800/600" alt="Old city lane" /></article>
+      <article class="photo" data-category="workspace"><img src="https://picsum.photos/seed/g6/800/700" alt="Creative desk setup" /></article>
+      <article class="photo" data-category="nature"><img src="https://picsum.photos/seed/g7/800/680" alt="Waterfall scene" /></article>
+      <article class="photo" data-category="travel"><img src="https://picsum.photos/seed/g8/800/740" alt="Beach at sunset" /></article>
+    </section>
+  </main>
+</body>
+</html>
