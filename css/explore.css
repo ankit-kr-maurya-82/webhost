@@ -191,3 +191,10 @@ body {
   margin-right: 6px;
   line-height: 1;
 }
+
+@media (hover: none) {
+  .save,
+  .meta {
+    opacity: 1;
+  }
+}

@@ -111,9 +111,10 @@ body {
   }
 
   .top-strip.open .top-nav {
-    max-height: 340px;
+    max-height: calc(100vh - 64px);
     opacity: 1;
     padding-top: 8px;
+    overflow-y: auto;
   }
 
   .top-nav a {

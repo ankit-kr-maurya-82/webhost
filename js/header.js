@@ -47,6 +47,20 @@
     });
   });
 
+  document.addEventListener("click", function (event) {
+    if (!mobileQuery.matches || !topStrip.classList.contains("open")) return;
+    if (topStrip.contains(event.target)) return;
+    setExpandedState(false);
+    requestAnimationFrame(syncParentHeaderHeight);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key !== "Escape") return;
+    if (!topStrip.classList.contains("open")) return;
+    setExpandedState(false);
+    requestAnimationFrame(syncParentHeaderHeight);
+  });
+
   mobileQuery.addEventListener("change", function () {
     if (!mobileQuery.matches) setExpandedState(false);
     syncParentHeaderHeight();

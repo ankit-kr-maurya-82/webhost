@@ -1,8 +1,4 @@
 (function () {
-  document.addEventListener("copy", (event) => {
-    event.preventDefault();
-  });
-
   const dateEl = document.getElementById("live-date");
   if (dateEl) {
     const now = new Date();

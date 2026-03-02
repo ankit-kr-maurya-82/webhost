@@ -27,7 +27,7 @@
   const exploreLink = document.getElementById("explore-link");
   if (exploreLink) {
     exploreLink.addEventListener("click", function () {
-      console.log("Navigating to Explore Feed...");
+      // console.log("Navigating to Explore Feed...");
     });
   }
 })();
