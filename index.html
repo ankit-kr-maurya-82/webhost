@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BlackImg Workspace</title>
-  <link rel="stylesheet" href="css/shell.css" />
 </head>
-<body>
-  <div class="shell">
-    <iframe class="frame-top" src="header.html" name="topFrame" title="Top Navigation"></iframe>
-    <iframe class="frame-main" src="dashboard.html" name="mainFrame" title="Main Content"></iframe>
-  </div>
-
+<frameset rows="80,*" border="0" frameborder="0" framespacing="0">
+  <frame src="header.html" name="topFrame" title="Top Navigation" scrolling="no" noresize />
+  <frame src="dashboard.html" name="mainFrame" title="Main Content" />
   <noscript>
-    <p class="fallback">JavaScript is not required. Open <a href="dashboard.html">dashboard.html</a>.</p>
+    <body>
+      <p>JavaScript is not required. Open <a href="dashboard.html">dashboard.html</a>.</p>
+    </body>
   </noscript>
-</body>
+</frameset>
 </html>
 
