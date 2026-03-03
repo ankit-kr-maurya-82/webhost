@@ -2,16 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BlackImg Workspace</title>
+  <style>
+    :root {
+      --top-h: 104px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-rows: var(--top-h) 1fr;
+      width: 100%;
+      height: 100%;
+    }
+
+    .frame {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+  </style>
 </head>
-<frameset rows="80,*" border="0" frameborder="0" framespacing="0">
-  <frame src="header.html" name="topFrame" title="Top Navigation" scrolling="no" noresize />
-  <frame src="dashboard.html" name="mainFrame" title="Main Content" />
-  <noscript>
-    <body>
-      <p>JavaScript is not required. Open <a href="dashboard.html">dashboard.html</a>.</p>
-    </body>
-  </noscript>
-</frameset>
+<body>
+  <main class="workspace">
+    <iframe class="frame" src="header.html" name="topFrame" title="Top Navigation"></iframe>
+    <iframe class="frame" src="dashboard.html" name="mainFrame" title="Main Content"></iframe>
+  </main>
+</body>
 </html>
 
