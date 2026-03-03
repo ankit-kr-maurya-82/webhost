@@ -5,6 +5,10 @@
 ## 1. Introduction
 BlackImg is a multi-page front-end website built using HTML, CSS, and JavaScript. The project is designed as a visual discovery platform where users can access structured pages such as Home, Dashboard, About, Services, Gallery, Explore, and Contact. The main objective is to demonstrate modular web design, smooth navigation, and practical implementation of core web technologies.
 
+The website is developed as part of the  Web Technology I minor assignment to apply theoretical concepts in a real project environment. It focuses on organizing content across multiple linked pages, maintaining a consistent user interface, and improving usability through clear navigation structure. Each module is designed with a specific purpose so that the overall website feels connected and easy to use.
+
+In addition to page structure and styling, the project also includes client-side interactivity such as gallery filtering and form validation. These features help demonstrate how JavaScript can enhance user experience without requiring backend integration in the initial stage. Overall, BlackImg presents a practical front-end implementation that reflects responsive design principles, reusable components, and user-focused layout planning.
+
 ## 2. Development Requirements
 ### 2.1 Hardware
 - Laptop/Desktop system
